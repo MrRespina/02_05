@@ -1,0 +1,24 @@
+C:\Program Files\MongoDB\Server\5.0\bin
+
+mongod --dbpath C:\Users\sdedu\Desktop\Dev\mongo --bind_ip_all --ipv6 --auth
+
+< 계정 만들기 >
+	use admin
+	- switched to db admin <
+
+	db.createUser({ user:'Respina',pwd:'sdj7524',roles:['root']});
+	- Successfully added user: { "user" : "Respina", "roles" : [ "root" ] } <
+
+	< admi으로 접속 >
+	mongo admin -u Respina -p sdj7524
+
+	show users로 계정 확인
+	
+	< db만들기 >
+	use nodejs
+	
+	컬렉션 생성
+	db.createCollection('users');
+	db.createCollection('comments');
+
+npm install express mongoose morgan nunjucks chokidar
